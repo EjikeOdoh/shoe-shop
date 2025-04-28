@@ -1,4 +1,4 @@
-.hero, .products {
+.products {
     padding: 160px 100px 100px 100px !important;
 }
 
@@ -9,6 +9,8 @@
     align-items: center;
     gap: 100px;
     position: relative;
+    height: 600px;
+    max-height: 700px;
 }
 
 .hero-texts {

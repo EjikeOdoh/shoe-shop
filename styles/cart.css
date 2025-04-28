@@ -1,0 +1,280 @@
+
+main {
+    padding: 0 100px 50px;
+    display: grid;
+    gap: 30px;
+}
+
+section {
+    padding: 0;
+    display: grid;
+    gap: 20px;
+}
+
+section > h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.mini-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top:1px solid #4841411A ;
+    padding-top: 24px;
+}
+
+.mini-nav img {
+    max-width: 10px;
+    height: auto;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 20px;
+}
+
+.items {
+    padding:20px 24px;
+    border: 1px solid #4841411A;
+    border-radius: 20px;
+    display: grid;
+    gap: 24px;
+    height: fit-content;
+}
+
+.item-card {
+    padding-bottom: 24px;
+    display: flex;
+    gap: 16px;
+    height: fit-content;
+}
+
+.item-card:not(:last-child) {
+    border-bottom: 1px solid #4841411A;
+}
+
+.item-img {
+    width: 124px;
+    height: 124px;
+    border-radius: 8px;
+    background-color: var(--card-container-color);
+    display: grid;
+    place-content: center;
+    padding: 10px;
+}
+
+.item-texts {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-texts button {
+    background: none;
+    height: fit-content;
+}
+
+.up, .down {
+    display: flex;
+    justify-content: space-between;
+}
+
+.up {
+    align-items: start;
+}
+
+.down {
+    align-items: flex-end;
+}
+
+.up-texts h2 {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.up-texts p {
+    font-size: 0.875rem;
+}
+
+.up-texts p > span {
+    color: #48414199;
+}
+
+.down p {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.down .btns {
+    height: 44px;
+    background-color: #F0F0F0;
+    padding: 12px 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.down .btns button {
+    font-size: 1.25rem;
+    height: 20px;
+    width: 20px;
+    display: grid;
+    place-content: center;
+}
+
+.order-summary {
+    display: grid;
+    gap: 24px;
+    padding: 20px 24px 48px;
+    border: 1px solid #4841411A;
+    border-radius: 20px;
+}
+
+.order-summary h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.order-details {
+    display: grid;
+    gap: 20px;
+}
+
+.det {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    color: #48414199;
+    font-size: 1.25rem;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+#discount {
+    color: #FF3333;
+}
+
+.total-texts {
+    border-top: 1px solid #4841411A;
+    padding-top: 20px;
+}
+
+.total-texts .label {
+   color: var(--primary-color);
+}
+
+#total {
+    font-size: 1.5rem;
+}
+
+.order-summary form {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 12px;
+  }
+
+.order-summary form .input {
+    padding: 12px 16px;
+    background-color: #F0F0F0;
+}
+
+.order-summary form .input input {
+    background-color: transparent;
+}
+
+.order-summary form button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.order-summary > a {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 16px 100px;
+    }
+
+    section > h1 {
+        font-size: 2rem;
+    }
+
+    .items-container {
+        grid-template-columns: 1fr;
+    }
+
+    .items {
+        padding: 14px;
+    }
+
+    .item-car {
+        padding-bottom: 16px;
+    }
+
+    .item-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .up-texts h2 {
+        font-size: 1rem;
+    }
+
+    .up-texts p {
+        font-size: 0.75rem;
+    }
+
+    .down p {
+        font-size: 1.25rem;
+    }
+
+    .down .btns {
+        height: 30px;
+    }
+
+    .order-summary {
+        padding: 20px;
+    }
+
+    .order-summary h2 {
+        font-size: 1.25rem;
+    }
+
+    .label, .value {
+        font-size: 1rem;
+    }
+
+    #total {
+        font-size: 1.25rem;
+    }
+
+    .order-summary form {
+        grid-template-columns: 5fr 2fr;
+    }
+
+    .order-summary form button {
+        font-size: 0.875rem;
+    }
+
+}
