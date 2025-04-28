@@ -1,0 +1,218 @@
+
+main {
+    padding: 0 100px 50px;
+    display: grid;
+    gap: 30px;
+}
+
+section {
+    padding: 0;
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    display: flex;
+    gap: 16px ;
+    align-items: center;
+    border: none !important;
+}
+
+label span {
+    flex-grow: 1;
+  padding-bottom: 12px;   
+    border-bottom: 1px solid #4841411A;
+}
+
+section > h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.mini-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top:1px solid #4841411A ;
+    padding-top: 24px;
+}
+
+.mini-nav img {
+    max-width: 10px;
+    height: auto;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 50px;
+}
+
+.items-container hr {
+    display: none;
+}
+
+.billing-details {
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid #4841411A;
+    display: grid;
+    gap: 16px;
+}
+
+.billing-details > * {
+    height: 50px;
+    border-bottom: 1px solid #4841411A;
+    font-size: 1.25rem;
+}
+
+.billing-details h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    height: fit-content;
+    border: none;
+}
+
+.fullname {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #4841411A;
+   
+}
+
+.fullname input {
+    font-size: 1.25rem;
+}
+.order-summary {
+    display: grid;
+    gap: 24px;
+    padding: 20px 24px;
+    border: 1px solid #4841411A;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.order-summary h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.order-details {
+    display: grid;
+    gap: 20px;
+}
+
+.det {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    color: #48414199;
+    font-size: 1.25rem;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+#discount {
+    color: #FF3333;
+}
+
+.total-texts {
+    border-top: 1px solid #4841411A;
+    padding-top: 20px;
+}
+
+.total-texts .label {
+   color: var(--primary-color);
+}
+
+#total {
+    font-size: 1.5rem;
+}
+
+.payment-options {
+    display: grid;
+    gap: 24px;
+}
+
+.payment-options label {
+    font-size: 1.125rem;
+}
+
+.payment-options > p {
+    font-size: 0.875rem;
+}
+
+.paypal img {
+    width: 18px;
+    margin-left: -12px;
+}
+
+.order-summary button {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cta {
+    background-color: var(--secondary-color);
+}
+
+.cta h1 {
+    color: var(--primary-color);
+}
+
+.cta form button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 16px 100px;
+    }
+
+    section > h1 {
+        font-size: 2rem;
+    }
+
+    .items-container {
+        grid-template-columns: 1fr;
+    }
+
+    .items-container hr {
+        display: block;
+        color:#4841411A;
+    }
+
+    .billing-details > * {
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    .fullname {
+        grid-template-columns: 1fr;
+        height: fit-content;
+        border: none;
+        gap: 12px;
+    }
+
+    .fullname input {
+        font-size: 1rem;
+        height: 40px;
+        border-bottom: 1px solid #4841411A;
+    }
+
+    .order-summary h2 {
+        border-bottom: 1px solid #4841411A;
+        padding-bottom: 16px;
+    }
+}

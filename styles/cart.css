@@ -211,6 +211,19 @@ section > h1 {
     font-weight: 500;
 }
 
+.cta {
+    background-color: var(--secondary-color);
+}
+
+.cta h1 {
+    color: var(--primary-color);
+}
+
+.cta form button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
 @media (max-width: 600px) {
     main {
         padding: 0 16px 100px;
