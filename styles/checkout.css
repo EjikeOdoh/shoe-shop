@@ -1,4 +1,3 @@
-
 main {
     padding: 0 100px 50px;
     display: grid;
@@ -13,18 +12,20 @@ section {
 
 label {
     display: flex;
-    gap: 16px ;
+    gap: 10px;
     align-items: center;
     border: none !important;
 }
 
 label span {
     flex-grow: 1;
-  padding-bottom: 12px;   
     border-bottom: 1px solid #4841411A;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-section > h1 {
+section>h1 {
     font-weight: 700;
     font-size: 2.5rem;
 }
@@ -33,18 +34,24 @@ section > h1 {
     display: flex;
     align-items: center;
     gap: 10px;
-    border-top:1px solid #4841411A ;
+    border-top: 1px solid #4841411A;
     padding-top: 24px;
+    color: #48414199;
+}
+
+.current {
+    color: #484141;
 }
 
 .mini-nav img {
     max-width: 10px;
-    height: auto;
+    height: 8px;
+    object-fit: contain;
 }
 
 .items-container {
     display: grid;
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: 1fr 2fr;
     gap: 50px;
 }
 
@@ -60,10 +67,13 @@ section > h1 {
     gap: 16px;
 }
 
-.billing-details > * {
+.billing-details>* {
     height: 50px;
     border-bottom: 1px solid #4841411A;
     font-size: 1.25rem;
+    max-width: 100% !important;
+    width: 100%;
+    color: #48414199;
 }
 
 .billing-details h2 {
@@ -71,18 +81,23 @@ section > h1 {
     font-size: 1.5rem;
     height: fit-content;
     border: none;
+    color: var(--primary-color);
 }
 
 .fullname {
+    width: 100%;
+    max-width: 100%;
     display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     border-bottom: 1px solid #4841411A;
-   
 }
 
 .fullname input {
     font-size: 1.25rem;
+    flex: 1;
 }
+
 .order-summary {
     display: grid;
     gap: 24px;
@@ -113,9 +128,16 @@ section > h1 {
     font-size: 1.25rem;
 }
 
+
+
 .value {
     font-weight: 700;
     font-size: 1.25rem;
+}
+
+.value:first-of-type {
+    color: green;
+    font-weight: 400 !important;
 }
 
 #discount {
@@ -128,7 +150,7 @@ section > h1 {
 }
 
 .total-texts .label {
-   color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 #total {
@@ -144,7 +166,7 @@ section > h1 {
     font-size: 1.125rem;
 }
 
-.payment-options > p {
+.payment-options>p {
     font-size: 0.875rem;
 }
 
@@ -180,7 +202,7 @@ section > h1 {
         padding: 0 16px 100px;
     }
 
-    section > h1 {
+    section>h1 {
         font-size: 2rem;
     }
 
@@ -190,10 +212,10 @@ section > h1 {
 
     .items-container hr {
         display: block;
-        color:#4841411A;
+        color: #4841411A;
     }
 
-    .billing-details > * {
+    .billing-details>* {
         font-size: 1rem;
         height: 40px;
     }

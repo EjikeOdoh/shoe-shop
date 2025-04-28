@@ -22,11 +22,18 @@ section > h1 {
     gap: 10px;
     border-top:1px solid #4841411A ;
     padding-top: 24px;
+    color:#48414199 ;
 }
+
+.current {
+    color: #484141;
+}
+
 
 .mini-nav img {
     max-width: 10px;
-    height: auto;
+    height: 8px;
+    object-fit: contain;
 }
 
 .items-container {
@@ -45,13 +52,13 @@ section > h1 {
 }
 
 .item-card {
-    padding-bottom: 24px;
     display: flex;
     gap: 16px;
     height: fit-content;
 }
 
 .item-card:not(:last-child) {
+    padding-bottom: 24px;
     border-bottom: 1px solid #4841411A;
 }
 
