@@ -87,9 +87,7 @@ section>h1 {
 .fullname {
     width: 100%;
     max-width: 100%;
-    display: grid;
     display: flex;
-    grid-template-columns: 1fr 1fr;
     border-bottom: 1px solid #4841411A;
 }
 
@@ -221,15 +219,15 @@ section>h1 {
     }
 
     .fullname {
-        grid-template-columns: 1fr;
         height: fit-content;
         border: none;
         gap: 12px;
+        flex-direction: column;
     }
 
     .fullname input {
         font-size: 1rem;
-        height: 40px;
+        min-height: 40px;
         border-bottom: 1px solid #4841411A;
     }
 
