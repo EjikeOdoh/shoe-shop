@@ -7,7 +7,7 @@ const data = [
         price: 120,
         discount: 0,
         rating: 4.5,
-        img: '../images/beige-shoes.png'
+        img: '/../images/beige-shoes.png'
     },
 
     {
@@ -18,7 +18,7 @@ const data = [
         price: 240,
         discount: 20,
         rating: 3.5,
-        img: '../images/brown-sneakers.png'
+        img: '/../images/brown-sneakers.png'
     },
 
     {
@@ -29,7 +29,7 @@ const data = [
         price: 180,
         discount: 0,
         rating: 4.5,
-        img: '../images/red-shoes.png'
+        img: '/../images/red-shoes.png'
     },
 
     {
@@ -40,7 +40,7 @@ const data = [
         price: 160,
         discount: 30,
         rating: 4.5,
-        img: '../images/orange-white-sneakers.png'
+        img: '/../images/orange-white-sneakers.png'
     },
 
     {
@@ -51,7 +51,7 @@ const data = [
         price: 232,
         discount: 20,
         rating: 5,
-        img: '../images/all-star-sneakers.png'
+        img: '/../images/all-star-sneakers.png'
     },
 
     {
@@ -62,7 +62,7 @@ const data = [
         price: 145,
         discount: 0,
         rating: 4,
-        img: '../images/pink-nike.png'
+        img: '/../images/pink-nike.png'
     },
 
     {
@@ -73,7 +73,7 @@ const data = [
         price: 80,
         discount: 0,
         rating: 3,
-        img: '../images/red-sneakers.png'
+        img: '/../images/red-sneakers.png'
     },
 
     {
@@ -84,7 +84,7 @@ const data = [
         price: 210,
         discount: 0,
         rating: 4.5,
-        img: '../images/black-nike.png'
+        img: '/../images/black-nike.png'
     }
 ]
 
