@@ -1,12 +1,15 @@
 const productsContainer = document.querySelector('.products-container')
 
 let productsContent = ""
+let cartsArr = JSON.parse(localStorage.getItem('cart')) || []
+
+console.log(cartsArr)
 
 for(let i = 0; i < updatedItems.length; i++) {
     productsContent = productsContent + `<div class="product-card">
                     <div class="product-img">
                         <img src=${updatedItems[i].img}>
-                        <button><img src="./icons/cart.png"></button>
+                        <button onclick="addToCart(${updatedItems[i].id})"><img src="./icons/cart.png"></button>
                     </div>
                     <div class="product-texts">
                         <h3>${updatedItems[i].name}</h3>
@@ -26,3 +29,19 @@ for(let i = 0; i < updatedItems.length; i++) {
 }
 
 productsContainer.innerHTML = productsContent
+
+
+function addToCart(id) {
+    const currentItem = updatedItems.find((item)=>{
+        return item.id === id
+    })
+
+    const isAlreadyInCart = cartsArr.includes(currentItem)
+
+    if (isAlreadyInCart) {
+        return
+    } else {
+        cartsArr.push(currentItem)
+        localStorage.setItem('cart', JSON.stringify(cartsArr))
+    }
+}

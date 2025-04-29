@@ -100,5 +100,5 @@ const updatedItems = data.map((item)=>{
         discountedPrice = item.price
     }
  
-    return {...item, discountedPrice: discountedPrice}
+    return {...item, discountedPrice: discountedPrice, qty: 1}
 })
