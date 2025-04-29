@@ -88,3 +88,17 @@ const data = [
     }
 ]
 
+
+
+const updatedItems = data.map((item)=>{
+
+    let discountedPrice = 0
+
+    if (item.discount) {
+        discountedPrice = item.price - (item.price * (item.discount / 100))
+    } else {
+        discountedPrice = item.price
+    }
+ 
+    return {...item, discountedPrice: discountedPrice}
+})
