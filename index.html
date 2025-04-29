@@ -17,9 +17,9 @@
     <header>
         <button><img src="./icons/menu.png"></button>
         <nav>
-            <a href="./index.html" class="logo">
+            <div class="logo">
                 <img src="./icons/logo.png">
-            </a>
+            </div>
             <ul class="main-menu">
                 <li><a href="">Shop</a></li>
                 <li><a href="">On Sale</a></li>
@@ -62,7 +62,11 @@
                             <span>Rating</span>
                             <span>4.5/5</span>
                         </div>
-                        <h2>$120</h2>
+                        <div class="price-container">
+                            <h2 class="price">$120</h2>
+                            <h2 class="dp">$232</h2>
+                            <p class="discount">-20%</p>
+                        </div>
                     </div>
                 </div>
 
@@ -143,6 +147,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/home.js"></script>
 </body>
 
 </html>
