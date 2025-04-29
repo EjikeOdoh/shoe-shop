@@ -117,11 +117,12 @@ section > h1 {
 
 .down .btns {
     height: 44px;
+    width: 120px;
     background-color: #F0F0F0;
-    padding: 12px 20px;
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: space-between;
     font-size: 0.875rem;
     font-weight: 500;
     border-radius: 8px;
@@ -129,10 +130,15 @@ section > h1 {
 
 .down .btns button {
     font-size: 1.25rem;
-    height: 20px;
+    height: 100%;
     width: 20px;
     display: grid;
     place-content: center;
+    padding-inline: 20px;
+}
+
+.down .btns button:hover {
+    background-color: var(--secondary-color);
 }
 
 .order-summary {
@@ -141,6 +147,7 @@ section > h1 {
     padding: 20px 24px 48px;
     border: 1px solid #4841411A;
     border-radius: 20px;
+    height: fit-content;
 }
 
 .order-summary h2 {
@@ -202,6 +209,11 @@ section > h1 {
 }
 
 .order-summary form button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.order-summary form button:hover {
     background-color: var(--primary-color);
     color: white;
 }
@@ -218,6 +230,11 @@ section > h1 {
     font-weight: 500;
 }
 
+.order-summary > a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
 .cta {
     background-color: var(--secondary-color);
 }
@@ -229,6 +246,10 @@ section > h1 {
 .cta form button {
     background-color: var(--primary-color);
     color: white;
+}
+
+.cta form button:hover {
+    background-color: var(--cta-container-1);
 }
 
 @media (max-width: 600px) {
