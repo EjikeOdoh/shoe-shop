@@ -34,6 +34,11 @@
     width: 200px;
 }
 
+.hero-texts button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
 .hero-img {
     position: absolute;
     top: 0;
@@ -52,14 +57,13 @@
 
 .products-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .product-card {
     display: grid;
     gap: 20px;
-    width: 300px;
 }
 
 .product-img {
@@ -82,6 +86,11 @@
     display: grid;
     place-content: center;
     border: 1px solid #4841414D;
+    cursor: pointer;
+}
+
+.product-img button:hover {
+    background-color: var(--secondary-color);
 }
 
 .product-texts {
@@ -99,6 +108,26 @@
     font-size: 1.5rem;
 }
 
+.price-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dp {
+    color: #00000066;
+    text-decoration: line-through;
+}
+
+.discount {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    background-color: #FF33331A;
+    border-radius: 60px;
+    color: #FF3333;
+    font-weight: 500;
+}
+
 .products > a {
     justify-self: flex-end;
     display: flex;
@@ -110,11 +139,19 @@
     text-wrap: nowrap;
 }
 
+.cta form button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
 @media (max-width: 600px) {
     .hero {
         padding: 75px 0!important;
         grid-template-columns: 1fr;
         gap: 30px;
+        height: auto;
+        max-height: max-content;
+
     }
 
     .hero-texts {
@@ -146,10 +183,12 @@
 
     .products-container {
         justify-content: center;
+        gap: 50px;
     }
 
     .product-card {
         margin: auto;
+        width: 400px;
     }
 
     .product-texts h3 {
