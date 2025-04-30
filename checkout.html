@@ -20,15 +20,16 @@
     <header>
         <button><img src="./icons/menu.png"></button>
         <nav>
-            <div class="logo">
+            <a href="./index.html" class="logo">
                 <img src="./icons/logo.png">
-            </div>
+            </a>
             <ul class="main-menu ">
                 <li><a href="">Shop</a></li>
                 <li><a href="">On Sale</a></li>
                 <li><a href="">New Arrivals</a></li>
             </ul>
             <div class="cart-container">
+                <span id="cartItems">0</span>
                 <a href="cart.html"><img src="./icons/cart.png"></a>
                 <a href=""><img src="./icons/avatar.png"></a>
             </div>
@@ -52,16 +53,16 @@
                         Billing Details
                     </h2>
                     <div class="fullname">
-                        <input type="text" name="firstName" id="" placeholder="First Name">
-                        <input type="text" name="lastName" id="" placeholder="Last Name">
+                        <input type="text" name="firstName" id="" placeholder="First Name" required>
+                        <input type="text" name="lastName" id="" placeholder="Last Name" required>
                     </div>
                     <input type="text" name="companyName" id="" placeholder="Company Name">
-                    <input type="text" name="country" id="" placeholder="Country">
-                    <input type="text" name="streetAddress" id="" placeholder="Stress Address">
+                    <input type="text" name="country" id="" placeholder="Country" required>
+                    <input type="text" name="streetAddress" id="" placeholder="Stress Address" required>
                     <input type="text" name="postalCode" id="" placeholder="Post code/Zip">
-                    <input type="text" name="town" id="" placeholder="Town/City">
-                    <input type="text" name="phone" id="" placeholder="Phone">
-                    <input type="email" name="email" id="" placeholder="Email">
+                    <input type="text" name="town" id="" placeholder="Town/City" required>
+                    <input type="text" name="phone" id="" placeholder="Phone" required>
+                    <input type="email" name="email" id="" placeholder="Email" required>
                     <label><input type="checkbox" name="createAccount"><span>Create an account?</span></label>
                     <label><input type="checkbox" name="differentAddress">
                         <span>Ship to a different address</span></label>
@@ -75,20 +76,17 @@
                             <p class="label">PRODUCT</p>
                             <p class="value">TOTAL</p>
                         </div>
-                        <div class="det">
-                            
+                        <div class="items">
+
                         </div>
-                        <div class="det">
-                            <p class="label">Subtotal</p>
-                            <p id="subtotal" class="value">$565</p>
-                        </div>
+
                         <div class="det">
                             <p class="label">Discount <span>(-20%)</span></p>
                             <p id="discount" class="value">-$133</p>
                         </div>
                         <div class="det">
                             <p class="label">Delivery Fee</p>
-                            <p class="value">$15</p>
+                            <p id="delivery-fee" class="value">$15</p>
                         </div>
                         <div class="det total-texts">
                             <p class="label">Total</p>
@@ -96,13 +94,21 @@
                         </div>
                     </div>
                     <div class="payment-options">
-                        <label><input type="radio" name="">Direct bank transfer</label>
+                        <label>
+                            <input type="radio" name="gateway" required>Direct bank transfer
+                        </label>
                         <p>Make your payment directly into our bank account. Please use your Order ID as the payment
                             reference. Your order will not be shipped until the funds have cleared in our account</p>
-                        <label><input type="radio" name="">Check payments</label>
-                        <label><input type="radio" name="">Cash on delivery</label>
-                        <label class="paypal"><input type="radio" name="">PayPal <img
-                                src="./icons/paypal-icon.png"></label>
+                        <label>
+                            <input type="radio" name="gateway" required>Check payments
+                        </label>
+                        <label>
+                            <input type="radio" name="gateway" required>Cash on delivery
+                        </label>
+                        <label class="paypal">
+                            <input type="radio" name="gateway" required>PayPal
+                            <img src="./icons/paypal-icon.png">
+                        </label>
                     </div>
                     <button>Place Order <img src="./icons/white-arrow.png"></button>
                 </div>
@@ -181,6 +187,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/checkout.js"></script>
 </body>
 
 </html>

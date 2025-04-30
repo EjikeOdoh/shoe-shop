@@ -1,6 +1,9 @@
 let cartsArr = JSON.parse(localStorage.getItem('cart')) || []
 console.log(cartsArr);
 
+const cartsContainer = document.querySelector('#cartItems')
+
+
 const cartItemsContainer = document.querySelector('.items')
 const subTotalContainer = document.querySelector('#subtotal')
 const discountContainer = document.querySelector('.det>p>span')
@@ -39,7 +42,7 @@ function renderCartItems(arr) {
                         </div>
                     </div>`
     }
-
+    cartsContainer.textContent = cartsArr.length;
     cartItemsContainer.innerHTML = cartsContent
     updateOrderSummary()
 }

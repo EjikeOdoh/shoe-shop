@@ -1,9 +1,10 @@
 const productsContainer = document.querySelector('.products-container')
+const cartItemsContainer = document.querySelector('#cartItems')
 
 let productsContent = ""
 let cartsArr = JSON.parse(localStorage.getItem('cart')) || []
 
-console.log(cartsArr)
+cartItemsContainer.textContent = cartsArr.length;
 
 for(let i = 0; i < updatedItems.length; i++) {
     productsContent = productsContent + `<div class="product-card">
@@ -35,13 +36,17 @@ function addToCart(id) {
     const currentItem = updatedItems.find((item)=>{
         return item.id === id
     })
-
-    const isAlreadyInCart = cartsArr.includes(currentItem)
+    
+    const isAlreadyInCart = cartsArr.find((item)=>{
+        return item.id === id
+    })
 
     if (isAlreadyInCart) {
         return
     } else {
         cartsArr.push(currentItem)
         localStorage.setItem('cart', JSON.stringify(cartsArr))
+        cartItemsContainer.textContent = cartsArr.length;
     }
+
 }

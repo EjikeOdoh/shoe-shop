@@ -17,6 +17,17 @@ label {
     border: none !important;
 }
 
+/* input {
+    position: relative;
+}
+
+input:required::before {
+    content: "*";
+    color: red;
+    position: absolute;
+    left: -20px;
+} */
+
 label span {
     flex-grow: 1;
     border-bottom: 1px solid #4841411A;
@@ -114,6 +125,12 @@ section>h1 {
     display: grid;
     gap: 20px;
 }
+
+.order-details .items {
+    display: grid;
+    gap: 20px;
+}
+
 
 .det {
     display: flex;
