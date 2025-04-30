@@ -252,6 +252,16 @@ section > h1 {
     background-color: var(--cta-container-1);
 }
 
+.notice {
+    text-align: center;
+    padding-block: 100px;
+    font-weight: 500;
+}
+
+.hide {
+    display: none !important;
+}
+
 @media (max-width: 600px) {
     main {
         padding: 0 16px 100px;

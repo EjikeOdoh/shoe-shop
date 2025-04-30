@@ -2,14 +2,16 @@ let cartsArr = JSON.parse(localStorage.getItem('cart')) || []
 console.log(cartsArr);
 
 const cartsContainer = document.querySelector('#cartItems')
-
-
+const itemsContainer = document.querySelector('.items-container')
+const notice = document.querySelector('.notice')
 const cartItemsContainer = document.querySelector('.items')
 const subTotalContainer = document.querySelector('#subtotal')
 const discountContainer = document.querySelector('.det>p>span')
 const discountAmountContainer = document.querySelector('#discount')
 const deliveryFeeContainer = document.querySelector('#delivery-fee')
 const totalContainer = document.querySelector('#total')
+
+
 
 function renderCartItems(arr) {
     let cartsContent = ""
@@ -45,6 +47,11 @@ function renderCartItems(arr) {
     cartsContainer.textContent = cartsArr.length;
     cartItemsContainer.innerHTML = cartsContent
     updateOrderSummary()
+
+    if (cartsArr.length < 1) {
+        notice.classList.remove('hide')
+        itemsContainer.classList.add('hide')
+      }
 }
 
 renderCartItems(cartsArr)

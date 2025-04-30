@@ -93,6 +93,11 @@
     background-color: var(--secondary-color);
 }
 
+.product-img button:disabled {
+    background-color: var(--secondary-color);
+    cursor: not-allowed;
+}
+
 .product-texts {
     display: grid;
     gap: 10px;

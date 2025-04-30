@@ -83,7 +83,7 @@ const data = [
 
 
 
-const updatedItems = data.map((item)=>{
+let updatedItems = data.map((item)=>{
 
     let discountedPrice = 0
 
@@ -93,5 +93,5 @@ const updatedItems = data.map((item)=>{
         discountedPrice = item.price
     }
  
-    return {...item, discountedPrice: discountedPrice, qty: 1}
+    return {...item, discountedPrice: discountedPrice, qty: 1, selected: false}
 })

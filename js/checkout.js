@@ -1,6 +1,5 @@
 
 let cartArr = JSON.parse(localStorage.getItem('cart')) || []
-console.log(cartArr)
 const cartsContainer = document.querySelector('#cartItems')
 const cartItemsContainer = document.querySelector('.items')
 cartsContainer.textContent = cartArr.length;
@@ -24,8 +23,6 @@ const discount = (discountAmount/subTotal) * 100
 const deliveryFee =  20;
 const totalAmount = subTotal + deliveryFee - discountAmount
 
-console.log(discountAmount, subTotal, discount, deliveryFee, totalAmount)
-
 
 let cartContent = ""
 for (let i = 0; i < cartArr.length; i++) {
@@ -40,3 +37,21 @@ discountContainer.textContent = `(-${discount.toFixed(2)}%)`
 discountAmountContainer.textContent = `-$${discountAmount.toFixed(2)}`
 deliveryFeeContainer.textContent = `$${deliveryFee.toFixed(2)}`
 totalAmountContainer.textContent = `$${totalAmount.toFixed(2)}`
+
+
+const form = document.querySelector('form')
+form.addEventListener('submit', (e)=> {
+    e.preventDefault()
+    let checkoutData = new FormData(e.currentTarget)
+    checkoutData = Object.fromEntries(checkoutData)
+    // console.log(checkoutData)
+    /*
+         This is where we send this data to some backend using apis
+    */
+   form.reset()
+//    window.location.href = ('./index.html')
+    localStorage.removeItem('cart')
+   window.location.replace('./index.html')
+})
+
+
